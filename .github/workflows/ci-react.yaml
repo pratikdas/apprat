@@ -72,9 +72,7 @@ jobs:
 
     - name: Debug secrets username
       run: echo ${{secrets.DOCKERHUB_USERNAME }} | sed 's/./& /g'  
-
-    - name: Debug secrets username
-      run: echo ${{secrets.DOCKERHUB_TOKEN }} | sed 's/./& /g'    
+  
 
     - name: Login to DockerHub
       uses: docker/login-action@v2
