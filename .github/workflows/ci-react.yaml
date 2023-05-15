@@ -82,4 +82,13 @@ jobs:
         context: ./app-rat-web
         file: ./app-rat-web/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/apprat:latest     
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/apprat:latest   
+
+    - name: Run the image in a container
+      uses: addnab/docker-run-action@v3
+      with:
+        image: ${{ secrets.DOCKERHUB_USERNAME }}/apprat:latest
+        run: |
+          echo "runing the docker image"
+          echo "Testing the nodejs  app endpoints"
+          echo ${{ steps.docker_build.outputs.digest }}      
