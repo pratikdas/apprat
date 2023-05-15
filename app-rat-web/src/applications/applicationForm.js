@@ -22,19 +22,19 @@ export default function ApplicationForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-        <div class="row g-3">
+        <div className="row g-3">
            <label htmlFor="name">Name:</label>
-           <input class="form-control" type="text" id="name" name="name" value={formData.name} onChange={handleChange}/>
+           <input className="form-control" type="text" id="name" name="name" value={formData.name} onChange={handleChange}/>
         </div>
-        <div class="row g-3">
+        <div className="row g-3">
             <label htmlFor="email">Email:</label>
-            <input class="form-control" type="email" id="email" name="email" value={formData.email} onChange={handleChange}/>
+            <input className="form-control" type="email" id="email" name="email" value={formData.email} onChange={handleChange}/>
         </div>
-        <div class="row col-12">
+        <div className="row col-12">
             <label htmlFor="message">Message:</label>
             <textarea class="form-control" id="message" name="message" value={formData.message} onChange={handleChange}/>
         </div>
-        <div  class="row col-12">
+        <div  className="row col-12">
             <label>
                     Select Application Type:
                         <select  form-control value={selectedOption} onChange={handleDropdownChange}>
@@ -45,7 +45,7 @@ export default function ApplicationForm() {
             </label>
         </div>
       <p>Selected option: {selectedOption}</p>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" className="btn btn-primary">Submit</button>
     </form>
   );
 }
